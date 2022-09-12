@@ -9,7 +9,7 @@ const Products = ({ productSelectHandler, selectedProduct }) => {
   const filter = Products.slice(0, 3);
 
   const handleRotate = () => setRotateChevron(!rotateChevron);
-  const rotate = rotateChevron ? "rotate(180deg)" : "rotate(0)";
+//   const rotate = rotateChevron ? "rotate(180deg)" : "rotate(0)";
 
   useEffect(() => {
     axios
@@ -40,7 +40,7 @@ const Products = ({ productSelectHandler, selectedProduct }) => {
             <FaChevronCircleLeft
               className="chevron"
               style={
-                product.id == selectedProduct?.id
+                product.id === selectedProduct?.id
                   ? {
                       transform: "rotate(180deg)",
                       transition: "all 0.2s linear",
